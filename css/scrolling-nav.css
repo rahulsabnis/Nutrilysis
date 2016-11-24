@@ -31,16 +31,25 @@ html {
     height: 100%;
     padding-top: 150px;
     text-align: center;
-    background: #fff
+    background-image: url(Tracker.jpg);
+    background-size: cover;
 }
 
 .about-section {
     height: 100%;
     padding-top: 150px;
     text-align: center;
-    background: #eee;
+    color: white;
+    background-image: url(AboutPic.jpg);
+    background-size: cover;
 }
 
+.text-box{
+    background-color: rgba(255,255,255, 0.5);
+    color: black;
+    font-size: 100%;
+    
+}
 .services-section {
     height: 100%;
     padding-top: 150px;
