@@ -55,13 +55,16 @@ html {
     padding-top: 150px;
     text-align: center;
     background: #fff;
+    background-image: url(footprint1.jpg);
+    background-size: cover;
 }
 
 .team-section {
     height: 100%;
     padding-top: 150px;
     text-align: center;
-    background: #eee;
+    background-color: lightcyan;
+
 }
 
 .contact-section {
