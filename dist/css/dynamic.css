@@ -1,0 +1,30 @@
+* {
+  .border-radius(0) !important;
+}
+
+#field {
+    margin-bottom:0px;
+    width: 10%;
+}
+
+#portion1{
+  position: absolute;
+  width: 30%;
+  left: 250px;
+  top: 150px;
+}
+#portion2{
+  position: absolute;
+  width: 30%;
+  left: 600px;
+  top: 150px;
+}
+#portion3{
+  position: absolute;
+  width: 30%;
+  left: 950px;
+  top: 150px;
+}
+
+
+
