@@ -6,7 +6,7 @@
 
   <!-- Bootstrap Core CSS -->
   <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="dist/css/select2.min.css" rel="stylesheet">
   <link href="dist/css/select2-bootstrap.min.css" rel="stylesheet">
   <!--<link href="dist/css/bootstrap-chosen.min.css" rel="stylesheet">-->
@@ -71,7 +71,7 @@
 
                     </div>
 
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" id="makeCall">Submit</button>
                 </form>
             </div>
         </div>
@@ -126,6 +126,39 @@
 
 
       });
+
+    </script>
+
+    <script>
+    document.getElementById('makeCall').onclick = function() {apiCall()};
+    function apiCall() {
+      var app_id = "185ef909";
+      var api_key = "8f3c401be14660c9c8b1fbb4cc5d7843";
+
+      var brand = document.getElementById('brandName').value;
+      var name = document.getElementById('productName').value;
+
+      console.log(brand);
+      console.log(name);
+
+      var url = 'https://api.nutritionix.com/v1_1/search/' + brand + ' ' + name + ' ?results=0%3A1&cal_min=0&cal_max=50000&fields=item_name%2Cbrand_name%2Citem_id%2Cbrand_id%2Cnf_water_grams%2Cnf_calories%2Cnf_total_fat%2C+nf_cholesterol%2Cnf_sodium%2Cnf_sugars%2Cnf_protein&appId=185ef909&appKey=8f3c401be14660c9c8b1fbb4cc5d7843';
+
+      $.ajax({
+        type: 'GET',
+        url: url,
+        async: true,
+        dataType: 'json',
+        success: function (data) {
+          var properties = data.hits[0].fields;
+          console.log("Calories: " + properties.nf_calories);
+          console.log("Total Fat: " + properties.nf_total_fat);
+          console.log("Cholesterol: " + properties.nf_cholesterol);
+          console.log("Sodium: " + properties.nf_sodium);
+          console.log("Sugar: " + properties.nf_sugars);
+          console.log("Protein: " + properties.nf_protein);
+        }
+      });
+    }
 
     </script>
 
