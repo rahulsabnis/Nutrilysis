@@ -29,9 +29,9 @@ html {
 
 .intro-section {
     height: 100%;
-    padding-top: 150px;
+    padding-top: 350px;
     text-align: center;
-    background-image: url(Background.jpg);
+    background-image: url(food.jpg);
     background-size: cover;
 }
 
@@ -55,7 +55,7 @@ html {
     height: 100%;
     padding-top: 150px;
     text-align: center;
-    background-color: lightcyan;
+    background-image: url(Background.jpg);
 
 }
 
@@ -63,5 +63,5 @@ html {
     height: 100%;
     padding-top: 50px;
     text-align: center;
-    background: #fff;
+    background-image: url(restaurant_icons.png);
 }
