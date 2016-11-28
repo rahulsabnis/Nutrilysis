@@ -12,6 +12,9 @@
   <title>Nutrilysis - Daily nutrition Tracker</title>
 
   <!-- Bootstrap Core CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="dist/css/select2.min.css" rel="stylesheet">
+  <link href="dist/css/select2-bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom CSS -->
@@ -131,6 +134,18 @@
                       <label for="inputEmail">Email address</label>
                       <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
                       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                      <div class="col-md-12">
+                        <label for="inputText">Contacting Reason</label>
+                        <select multiple class="form-control" >
+                          <option value="1">Suggestions</option>
+                          <option value="2">Bugs</option>
+                          <option value="3">Improvements</option>
+                          <option value="4">Complement</option>
+                          <option value="5">Criticize</option>
+                          <option value="6">Questions</option>
+                        </select>
+                      </div>
+
                       <br>
                       <label for="inputText">Message</label>
                       <br>
@@ -144,12 +159,21 @@
       </div>
   </section>
 
+
+
   <!-- jQuery -->
   <script src="js/jquery.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap.min.js"></script>
-
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css.js"></script>
+  <script src="dist/js/select2.min.js"></script>
+  <!--<script src="dist/js/chosen.jquery.min.js"></script>-->
+  <script>
+    $('select').select2({
+      theme: 'bootstrap '
+    });
+  </script>
   <!-- Scrolling Nav JavaScript -->
   <script src="js/jquery.easing.min.js"></script>
   <script src="js/scrolling-nav.js"></script>
