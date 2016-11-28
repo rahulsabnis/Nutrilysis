@@ -31,7 +31,7 @@ html {
     height: 100%;
     padding-top: 150px;
     text-align: center;
-    background-image: url(Tracker.jpg);
+    background-image: url(Background.jpg);
     background-size: cover;
 }
 
@@ -49,14 +49,6 @@ html {
     color: black;
     font-size: 100%;
 
-}
-.services-section {
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-    background: #fff;
-    background-image: url(footprint1.jpg);
-    background-size: cover;
 }
 
 .team-section {
